@@ -1,0 +1,278 @@
+/* Adding fontin font */
+@font-face {
+ font-family: fontin;
+   src: url(/fonts/fontin2_pc/Fontin-Regular.ttf);
+ font-weight: normal;
+ font-style: normal;
+}
+
+/* Color Variables */
+:root {
+--main-color: #ffffff;
+--accent-color: #8ec36e;
+--letter-color: #000000;
+}
+/* CSS declarations go here */
+body {
+	background-color: #ffffff;
+}
+.relative {
+	height:100%;
+	width:100%;
+	position:relative;
+}
+.absolute {
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+/* Nav Bar */
+.nav-cont {
+	position:relative;
+}
+.menu-cont { /* note to self, need to deal with size change because we get this gap between logo and menu container*/
+	background-color: var(--main-color);
+	margin-top: 10em;
+	height: 4em;
+	padding-right: 0em;
+	margin-right: -3em;
+}
+.menu-itm-cont {
+	margin-left: -.8em;
+	margin-top: .2em;
+	padding-bottom: 0em;
+	border-bottom-color: var(--accent-color);
+	border-bottom-style: solid;
+	border-bottom-width: .4em;
+	border-left-color: var(--accent-color);
+	border-left-style: solid;
+	border-left-width: .4em;
+	border-right-color: var(--main-color);
+	border-right-style: solid;
+	border-right-width: .4em;
+	border-top-color: var(--main-color);
+	border-top-style: solid;
+	border-top-width: .4em;
+}
+.filler {
+	background-color: #ffffff;
+	margin-top: 0em;
+	height: 4em;
+}
+.nav-option-text {
+	text-decoration: none;
+	color: var(--letter-color);
+	padding-bottom: -.5em;
+	font-size: 2em;
+	font-family: 'fontin';
+}
+.nav-option-text:hover {
+	text-decoration: none;
+	color: var(--letter-color);
+}
+
+/* sub-menus here */
+.menu-itm-cont {
+	position: relative;
+    display: inline-block;
+}
+.sub-menu {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.3);
+	z-index: 3;
+    min-width: 160px;
+}
+.sub-menu a {
+	padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menu-itm-cont:hover .sub-menu {
+	display: block;
+}
+
+/* Landing Screen */
+.sub-cont {
+	margin-top: 3%;
+	margin-bottom: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+
+}
+
+.button {
+	background-color: var(--accent-color);
+    border: none;
+    color: white;
+    height: 2em;
+    width: 4em;
+    text-align: center;
+    text-decoration: none;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 3em;
+    font-family: 'fontin';
+}
+.button:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.weekly-main-cont {
+	position:relative;
+	padding: 1%;
+	margin-left: 10%;
+	font-family: 'fontin';
+	font-size: 1.5em;
+	width: 73%;
+	border: 1px solid #D3D3D3;
+}
+
+/* Calendar stuff */
+#calendarTitle {
+	display: none;
+}
+.fc-today {
+    background: #8ec36e !important;
+    border: none !important;
+    border-top: 1px solid #ddd !important;
+    font-weight: bold;
+} 
+
+/* About Page */
+.about-cont {
+	margin-top: 2%;
+	margin-left: 10%;
+	padding: 1.5%;
+	padding-bottom: 1%;
+	width: 75%;
+	font-size: 1.5em;
+	font-family: 'fontin';
+	border-width: 1px;
+	border-style: solid;
+	border-color: #D3D3D3;
+	border-radius: 3px;
+}
+.about-type-cont {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'fontin';
+}
+.team-pic {
+    float: none;
+    margin: 0 auto;
+	height: 40%;
+	width: 30%;
+}
+.team-pic-pic {
+	height: 100%;
+	width: 100%;
+}
+
+/* Contact */
+.descript-cont {
+	margin-left: 10%;
+	width: 70%;
+	font-family: 'fontin';
+	font-size: 1.5em;
+}
+.form-cont {
+	margin-left: 10%;
+	margin-top: 1.5%;
+	width: 60%;
+	border: 1px solid #D3D3D3;
+	padding: 1em;
+	padding-bottom: 3.25em;
+}
+.field {
+	font-family: 'fontin';
+
+}
+fieldset {
+	margin-bottom: 1%;
+}
+.field > label {
+	width: 5em;
+	font-size: 1.75em;
+	vertical-align: top;
+}
+.field > input {
+	height: 1.75em;
+	font-size: 1.75em;
+	width: 80%;
+}
+.field > *:focus {
+	outline: none;
+}
+
+#message {
+	width: 80%;
+	resize: none;
+}
+#honeypot {
+	display:none;
+}
+#thankyou-message {
+	font-family: 'fontin';
+	font-size: 3em;
+	text-align: center;
+	margin: auto;
+    width: 60%;
+    border: 1px solid #D3D3D3;
+    padding: 10px;
+}
+.send {
+	font-family: 'fontin';
+	font-size: 2em;
+	width: 15%;
+	height: 1.5em;
+	background-color: var(--accent-color);
+	float: right;
+}
+.send:focus {
+	outline: none;
+}
+
+/* Subscription */
+.sub-form-cont {
+	margin-left: 10%;
+	margin-top: 1.5%;
+	width: 60%;
+	border: 1px solid #D3D3D3;
+	padding: 1em;
+	padding-bottom: 3.25em;
+}
+.subscribe {
+	font-family: 'fontin';
+	font-size: 2em;
+	width: 20%;
+	height: 1.5em;
+	background-color: var(--accent-color);
+	float: right;
+}
+.subcribe:focus {
+	outline: none;
+}
+
+/* Footer */
+.footer-cont {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.footer-text {
+	float: left;
+}
+.footer-icons {
+	float: right;
+}
+.sm-img {
+	height: 2em;
+	width: 2em;
+}
+/* testing purposes */
+

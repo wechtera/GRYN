@@ -1,0 +1,31 @@
+<template name="subscribe">
+	{{>navbar}}
+	{{>script_template}}
+	<div class="descript-cont" id="descript-cont">
+		<strong>Join us!</strong> Want to stay up to date on the latest events in the greater Pittsburgh Region, let us add you to our news letter.  We will send you weekly blasts about what's going on and things you should know about.  
+	</div>
+	<div class="sub-form-cont" id="sub-form-cont">
+		<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxgMpfeppDQGiy0qsTYGeIARAgRLHNufRVFWb-Q65XcJWpix4PH/exec">
+			<fieldset class="field">
+				<label  for="name">Name: </label>
+				<input id="name" name="name" placeholder="You or your companies name">
+			</fieldset>
+			<fieldset class="field">
+				<label for="email">E-mail: </label>
+				<input id="email" name="email" value="" required placeholder="someone@gmail.com">
+				<span id="email-invalid" style="display:none">Must be valid e-mail</span>
+			</fieldset>
+			<fieldset>
+				<label class="sr-only">Keep this field blank</label>
+  				<input id="honeypot" type="text" name="honeypot" value="" />
+  			</fieldset>
+			<button class="subscribe">Subscribe</button>
+		</form>
+	</div>
+	<!-- add thank you here -->
+	<div id="thankyou-message" style="display:none">
+		<strong><em>Thanks for subscribing!</em></strong>	
+	</div>
+	<script data-cfasync="false" type="text/javascript" src="./js/email.js"></script>
+	{{>footer}}
+</template>

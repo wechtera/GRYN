@@ -1,0 +1,36 @@
+<template name="contact">
+	{{>navbar}}
+	{{>script_template}}
+	<div class="descript-cont" id="descript-cont">
+		<strong>We're new!</strong> Feel like you want to give us some feed back on how we're doing.  Are there events that you think we should be aware of, give us a holler.  Something we should be doing but you don't see, let us know and we'll see if we can add it.  Are you a company and want to work with us in the future, give us your details!  Stay green yinz.
+	</div>
+	<div class="form-cont" id="form-cont">
+		<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxgMpfeppDQGiy0qsTYGeIARAgRLHNufRVFWb-Q65XcJWpix4PH/exec">
+			<fieldset class="field">
+				<label  for="name">Name: </label>
+				<input id="name" name="name" placeholder="You or your companies name">
+			</fieldset>
+			<fieldset class="field">
+				<label for="email">E-mail: </label>
+				<input id="email" name="email" value="" required placeholder="someone@gmail.com">
+				<span id="email-invalid" style="display:none">Must be valid e-mail</span>
+			</fieldset>
+			<fieldset class="field">
+				<label  for="message">Message: </label>
+				<textarea id="message" name="message" rows="11" placeholder="Tell us what you think or about some upcoming event we should know about..."> </textarea>
+			</fieldset>
+			<fieldset>
+				<label class="sr-only">Keep this field blank</label>
+  				<input id="honeypot" type="text" name="honeypot" value="" />
+  			</fieldset>
+			<button class="send">SEND</button>
+		</form>
+	</div>
+	<!-- add thank you here -->
+	<div id="thankyou-message" style="display:none">
+		<strong><em>Thanks!</em></strong>
+			We will be in contact with you shortly!
+	</div>
+	<script data-cfasync="false" type="text/javascript" src="./js/email.js"></script>
+	{{>footer}}
+</template>
